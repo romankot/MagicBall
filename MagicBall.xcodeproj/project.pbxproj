@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		E1113AF82717FF1F006AB767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1113AF72717FF1F006AB767 /* AppDelegate.swift */; };
 		E1113AFA2717FF1F006AB767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1113AF92717FF1F006AB767 /* SceneDelegate.swift */; };
-		E1113AFC2717FF1F006AB767 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1113AFB2717FF1F006AB767 /* ViewController.swift */; };
 		E1113AFF2717FF1F006AB767 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1113AFD2717FF1F006AB767 /* Main.storyboard */; };
 		E1113B012717FF20006AB767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1113B002717FF20006AB767 /* Assets.xcassets */; };
 		E1113B042717FF20006AB767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1113B022717FF20006AB767 /* LaunchScreen.storyboard */; };
-		E181F97A271F098700E6B289 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181F979271F098700E6B289 /* SettingViewController.swift */; };
-		E181F97C271F51FA00E6B289 /* MagickDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181F97B271F51FA00E6B289 /* MagickDTO.swift */; };
+		E181F987272004D200E6B289 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181F985272004D200E6B289 /* SettingViewController.swift */; };
+		E181F988272004D200E6B289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181F986272004D200E6B289 /* ViewController.swift */; };
+		E181F98B272005D400E6B289 /* MagicResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E181F98A272005D400E6B289 /* MagicResponce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E1113AF42717FF1F006AB767 /* MagicBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1113AF72717FF1F006AB767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1113AF92717FF1F006AB767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1113AFB2717FF1F006AB767 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1113AFE2717FF1F006AB767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1113B002717FF20006AB767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1113B032717FF20006AB767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1113B052717FF20006AB767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E181F979271F098700E6B289 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		E181F97B271F51FA00E6B289 /* MagickDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagickDTO.swift; sourceTree = "<group>"; };
+		E181F985272004D200E6B289 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E181F986272004D200E6B289 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E181F98A272005D400E6B289 /* MagicResponce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicResponce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,18 +60,35 @@
 		E1113AF62717FF1F006AB767 /* MagicBall */ = {
 			isa = PBXGroup;
 			children = (
+				E181F989272005D400E6B289 /* Models */,
+				E181F984272004D200E6B289 /* UI */,
 				E1113AF72717FF1F006AB767 /* AppDelegate.swift */,
 				E1113AF92717FF1F006AB767 /* SceneDelegate.swift */,
-				E1113AFB2717FF1F006AB767 /* ViewController.swift */,
-				E181F979271F098700E6B289 /* SettingViewController.swift */,
 				E1113AFD2717FF1F006AB767 /* Main.storyboard */,
 				E1113B002717FF20006AB767 /* Assets.xcassets */,
 				E1113B022717FF20006AB767 /* LaunchScreen.storyboard */,
 				E1113B052717FF20006AB767 /* Info.plist */,
-				E181F97B271F51FA00E6B289 /* MagickDTO.swift */,
 			);
 			path = MagicBall;
 			sourceTree = "<group>";
+		};
+		E181F984272004D200E6B289 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E181F985272004D200E6B289 /* SettingViewController.swift */,
+				E181F986272004D200E6B289 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E181F989272005D400E6B289 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E181F98A272005D400E6B289 /* MagicResponce.swift */,
+			);
+			name = Models;
+			path = MagicBall/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -143,11 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1113AFC2717FF1F006AB767 /* ViewController.swift in Sources */,
-				E181F97C271F51FA00E6B289 /* MagickDTO.swift in Sources */,
 				E1113AF82717FF1F006AB767 /* AppDelegate.swift in Sources */,
 				E1113AFA2717FF1F006AB767 /* SceneDelegate.swift in Sources */,
-				E181F97A271F098700E6B289 /* SettingViewController.swift in Sources */,
+				E181F988272004D200E6B289 /* ViewController.swift in Sources */,
+				E181F98B272005D400E6B289 /* MagicResponce.swift in Sources */,
+				E181F987272004D200E6B289 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

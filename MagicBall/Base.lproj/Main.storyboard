@@ -25,11 +25,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFz-bG-auw">
-                                <rect key="frame" x="120" y="395" width="135" height="51"/>
+                                <rect key="frame" x="91" y="395" width="196" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="get answer">
+                                <state key="normal" title="get static answer">
                                     <color key="titleColor" name="AccentColor"/>
                                     <color key="titleShadowColor" systemColor="linkColor"/>
                                 </state>
@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="59"/>
+            <point key="canvasLocation" x="-236" y="58.920539730134934"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="49S-42-Yqi">

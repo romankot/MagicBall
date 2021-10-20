@@ -36,6 +36,21 @@ class ViewController: UIViewController {
     }
 
     func generateAnswer() {
+        let urlString = "https://8ball.delegator.com/magic/JSON/question"
+        
+        guard let requestUrl = URL(string:urlString) else { return }
+             
+                let task = URLSession.shared.dataTask(with: requestUrl) {
+                    (data, response, error) in
+                    if error == nil, let usableData=data {
+                        if let jsonResult =  try? JSONSerialization.jsonObject(with: usableData)as? [String: Any] {
+                            let jsocdecode = try! JSONDecoder().decode(ResponceAPI.self, from: usableData)
+                            print(jsocdecode.magic.answer)
+                            self.webAnswer = jsocdecode.magic.answer
+                        }
+                    }
+                }
+                task.resume()
         
         answerLabel.text = webAnswer
     }
