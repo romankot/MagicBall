@@ -8,28 +8,47 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
-    let answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
+    var answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes"]
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var shakeButton: UIButton!
+    var webAnswer = "No Answers yet"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("answers"), object: nil)
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        let text = (notification.object as! String?)!
+        // use text to generate answer
+        print("received answers  = \n" + text)
+        answers = text.components(separatedBy: .newlines)
     }
     
     @IBAction func shakeButtonPressed(_ sender: UIButton){
-        let randomIndex = Int.random(in: 0..<answers.count)
-        print("Shake it like a polaroid picture!")
-        answerLabel.text = answers[randomIndex]
+        getStaticAnswer()
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         guard motion == .motionShake else { return }
+        generateAnswer()
+    }
+
+    func generateAnswer() {
+        
+        answerLabel.text = webAnswer
+    }
+    
+    func getStaticAnswer() {
         let randomIndex = Int.random(in: 0..<answers.count)
         answerLabel.text = answers[randomIndex]
     }
 
+    @IBAction func settingPressed(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "setting_vc") else { return }
+        present(vc, animated: true)
+    }
+    
 }
 
